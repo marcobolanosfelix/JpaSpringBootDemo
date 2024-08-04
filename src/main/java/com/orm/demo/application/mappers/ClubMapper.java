@@ -44,4 +44,12 @@ public class ClubMapper extends Mapper<Club, ClubEntity> implements IMapper<Club
         return entity;
     }
 
+    public List<ClubEntity> toEntityList(List<Club> models) {
+        List<ClubEntity> entities = new ArrayList<>();
+        for (Club model : models) {
+            entities.add( toEntity( model ) );
+        }
+        return entities;
+    }
+
 }

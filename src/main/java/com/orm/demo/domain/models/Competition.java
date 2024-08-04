@@ -6,8 +6,8 @@ import java.util.List;
 public class Competition {
     private Integer idCompetition;
     private String stadium;
-    private LocalDateTime fecha;
-//    private List<Competition> competitions;
+    private LocalDateTime dateCompetition;
+    private List<Club> clubs;
 
     public Integer getIdCompetition() {
         return idCompetition;
@@ -25,19 +25,20 @@ public class Competition {
         this.stadium = stadium;
     }
 
-    public LocalDateTime getFecha() {
-        return fecha;
+    public LocalDateTime getDateCompetition() {
+        return dateCompetition;
     }
 
-    public void setFecha(LocalDateTime fecha) {
-        this.fecha = fecha;
+    public void setDateCompetition(LocalDateTime dateCompetition) {
+        this.dateCompetition = dateCompetition;
     }
 
-//    public List<Competition> getCompetitions() {
-//        return competitions;
-//    }
-//
-//    public void setCompetitions(List<Competition> competitions) {
-//        this.competitions = competitions;
-//    }
+    public List<Club> getClubs() {
+        return clubs;
+    }
+
+    public void setClubs(List<Club> clubs) {
+        this.clubs = clubs;
+    }
+
 }

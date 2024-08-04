@@ -23,14 +23,6 @@ public class ClubEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "club")
     private List<PlayerEntity> players;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "club_competition",
-            joinColumns = @JoinColumn( name = "id_club" ),
-            inverseJoinColumns = @JoinColumn( name = "id_competition" )
-    )
-    private List<CompetitionsEntity> competitions;
-
 
     public Integer getIdClub() {
         return idClub;
@@ -72,11 +64,4 @@ public class ClubEntity {
         this.players = players;
     }
 
-    public List<CompetitionsEntity> getCompetitions() {
-        return competitions;
-    }
-
-    public void setCompetitions(List<CompetitionsEntity> competitions) {
-        this.competitions = competitions;
-    }
 }
