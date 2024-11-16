@@ -1,4 +1,4 @@
-package com.orm.demo.shared;
+package com.orm.demo.shared.utils;
 
 import org.springframework.beans.BeanUtils;
 

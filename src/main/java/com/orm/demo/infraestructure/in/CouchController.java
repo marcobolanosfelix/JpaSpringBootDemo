@@ -3,6 +3,9 @@ package com.orm.demo.infraestructure.in;
 import com.orm.demo.application.usecases.couch.GetAllCouchUsecase;
 import com.orm.demo.application.usecases.couch.SaveCouchUsecase;
 import com.orm.demo.domain.models.Couch;
+import com.orm.demo.domain.response.Response;
+import com.orm.demo.domain.response.couch.CouchResponse;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,14 +24,16 @@ public class CouchController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Couch>> getAll() {
-        List<Couch> couches;
-        try {
-            couches = getAllCouchUsecase.getAll();
-        } catch (Exception ex) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-        }
-        return ResponseEntity.status(HttpStatus.OK).body(couches);
+    public CouchResponse getAll() {
+        // List<Couch> couches;
+        // try {
+        //     couches = getAllCouchUsecase.getAll();
+        // } catch (Exception ex) {
+        //     return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        // }
+        // return ResponseEntity.status(HttpStatus.OK).body(couches);
+
+        return getAllCouchUsecase.getAll();
     }
 
     @PostMapping

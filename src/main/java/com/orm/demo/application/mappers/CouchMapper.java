@@ -2,8 +2,9 @@ package com.orm.demo.application.mappers;
 
 import com.orm.demo.domain.entities.CouchEntity;
 import com.orm.demo.domain.models.Couch;
-import com.orm.demo.shared.IMapper;
-import com.orm.demo.shared.Mapper;
+import com.orm.demo.shared.utils.IMapper;
+import com.orm.demo.shared.utils.Mapper;
+
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

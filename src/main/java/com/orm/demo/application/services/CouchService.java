@@ -1,6 +1,5 @@
 package com.orm.demo.application.services;
 
-import com.orm.demo.application.mappers.CouchMapper;
 import com.orm.demo.domain.entities.CouchEntity;
 import com.orm.demo.infraestructure.out.repositories.CouchRepository;
 import org.springframework.stereotype.Service;
